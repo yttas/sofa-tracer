@@ -34,6 +34,8 @@
         <module>tracer-test/log4j2-test</module>
         <module>tracer-test/log4j-test</module>
         <module>sofa-tracer-plugins/sofa-tracer-dubbo-common-plugin</module>
+        <module>tracer-sofa-boot-compatible-1.x</module>
+        <module>tracer-sofa-boot-compatible-2.x</module>
     </modules>
 
     <properties>
@@ -137,6 +139,25 @@
                 <artifactId>sofa-tracer-flexible-plugin</artifactId>
                 <version>${sofa.tracer.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>sofa-tracer-dubbo-common-plugin</artifactId>
+                <version>${sofa.tracer.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>tracer-sofa-boot-compatible-1.x</artifactId>
+                <version>${sofa.tracer.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alipay.sofa</groupId>
+                <artifactId>tracer-sofa-boot-compatible-2.x</artifactId>
+                <version>${sofa.tracer.version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>com.alipay.sofa</groupId>
                 <artifactId>tracer-all</artifactId>
