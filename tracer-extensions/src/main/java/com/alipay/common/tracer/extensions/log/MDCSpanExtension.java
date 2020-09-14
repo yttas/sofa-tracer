@@ -37,6 +37,8 @@ public class MDCSpanExtension implements SpanExtension {
             if (sofaTracerSpanContext != null) {
                 MDC.put(MDCKeyConstants.MDC_TRACEID, sofaTracerSpanContext.getTraceId());
                 MDC.put(MDCKeyConstants.MDC_SPANID, sofaTracerSpanContext.getSpanId());
+                MDC.put(MDCKeyConstants.MDC_PARENTSPANID, sofaTracerSpanContext.getParentId());
+                
             }
         }
 
@@ -54,6 +56,7 @@ public class MDCSpanExtension implements SpanExtension {
                 if (sofaTracerSpanContext != null) {
                     MDC.put(MDCKeyConstants.MDC_TRACEID, sofaTracerSpanContext.getTraceId());
                     MDC.put(MDCKeyConstants.MDC_SPANID, sofaTracerSpanContext.getSpanId());
+                    MDC.put(MDCKeyConstants.MDC_PARENTSPANID, sofaTracerSpanContext.getParentId());
                 }
             }
         }
@@ -63,6 +66,7 @@ public class MDCSpanExtension implements SpanExtension {
     public void logStoppedSpanInRunnable(Span currentSpan) {
         MDC.remove(MDCKeyConstants.MDC_TRACEID);
         MDC.remove(MDCKeyConstants.MDC_SPANID);
+        MDC.remove(MDCKeyConstants.MDC_PARENTSPANID);
     }
 
     @Override
